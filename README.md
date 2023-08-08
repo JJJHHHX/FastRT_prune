@@ -8,9 +8,12 @@ convert structred pruned reid model to TensorRT engine, based on [fastreid/FastR
    python tools/get_wts.py --prune=True --pth-path="model_final.pth" \
    --wts-path="./model_final.wts" --shape-path="./pruned_conv_output_shape.txt"
    ```
-2. change pruned conv shape file path in 
+2. change pruned conv shape file path in `fastrt/backbones/sbs_resnet.cpp` line 333.
+   ```
+   std::map<std::string, int> ConvOutputShapeMap=loadPrunedConvOutputShape("pruned_conv_output_shape_0.5.txt");
+   ```
 
-2. Build <a name="step4"></a>`fastrt` execute file
+3. Build `fastrt` execute file
    
    ``` 
    mkdir build
@@ -21,14 +24,11 @@ convert structred pruned reid model to TensorRT engine, based on [fastreid/FastR
    make
    ```
 
-3. Run <a name="step5"></a>`fastrt`
+4. Run `fastrt`
    
 
    ``` 
    ./demo/fastrt -s  // serialize model & save as 'xxx.engine' file
-   ```
-
-   ``` 
    ./demo/fastrt -d  // deserialize 'xxx.engine' file and run inference
    ```
 

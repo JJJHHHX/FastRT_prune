@@ -1,5 +1,5 @@
 # C++ FastReID-TensorRT-pruned
-convert structred pruned reid model to TensorRT engine, based on [fastreid/FastRT](https://github.com/JDAI-CV/fast-reid/tree/master/projects/FastRT) \\
+convert structred pruned reid model to TensorRT engine, based on [fastreid/FastRT](https://github.com/JDAI-CV/fast-reid/tree/master/projects/FastRT)   
 基于fastreid，将进行network-slimming后的模型转为TensorRT。[方法及实验链接](https://blog.csdn.net/qq_38853994/article/details/131781473?spm=1001.2014.3001.5501)
 ### How to Run
 

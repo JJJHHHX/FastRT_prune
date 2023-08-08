@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/l2norm.dir/main.cpp.o -o l2norm   -L/usr/local/cuda/lib64  -L/home/xujiahong/TensorRT-7.2.3.4/lib  -Wl,-rpath,/usr/local/cuda/lib64:/home/xujiahong/TensorRT-7.2.3.4/lib -lnvinfer -lcudart 
